@@ -43,3 +43,4 @@ public class Week3Question2 {
         System.out.println("Net salary: Rs " + account.getNetSalary());
     }
 }
+
