@@ -1,9 +1,4 @@
 public class Week1Question5 {
-    /**
-     * Categorizes review words into Short (1-4 letters), Medium (5-8 letters), and Long (9+ letters).
-     * 
-     * @param review The full text string of the movie review.
-     */
     public static void classifyWordLengths(String review) {
         if (review == null || review.trim().isEmpty()) {
             System.out.println("Short: 0 | Medium: 0 | Long: 0");
@@ -34,4 +29,3 @@ public class Week1Question5 {
         classifyWordLengths(review);
     }
 }
-

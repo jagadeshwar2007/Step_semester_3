@@ -1,20 +1,10 @@
 public class Week1Question4 {
-    /**
-     * Computes totals for two inventory sections and identifies the overall highest quantity item.
-     * 
-     * @param sectionA Item quantities in Section A.
-     * @param sectionB Item quantities in Section B.
-     */
     public static void analyzeInventory(int[] sectionA, int[] sectionB) {
         int totalA = 0;
         int totalB = 0;
 
-        for (int qty : sectionA) {
-            totalA += qty;
-        }
-        for (int qty : sectionB) {
-            totalB += qty;
-        }
+        for (int qty : sectionA) totalA += qty;
+        for (int qty : sectionB) totalB += qty;
 
         String status = (totalA == totalB) ? "Balanced" : "Not Balanced";
 
@@ -22,21 +12,19 @@ public class Week1Question4 {
         String maxSection = "";
         int maxItemIndex = -1;
 
-        // Scan Section A
         for (int i = 0; i < sectionA.length; i++) {
             if (sectionA[i] > maxQty) {
                 maxQty = sectionA[i];
                 maxSection = "Section A";
-                maxItemIndex = i + 1; // 1-indexed Item number
+                maxItemIndex = i + 1;
             }
         }
 
-        // Scan Section B
         for (int i = 0; i < sectionB.length; i++) {
             if (sectionB[i] > maxQty) {
                 maxQty = sectionB[i];
                 maxSection = "Section B";
-                maxItemIndex = i + 1; // 1-indexed Item number
+                maxItemIndex = i + 1;
             }
         }
 
@@ -47,8 +35,6 @@ public class Week1Question4 {
     public static void main(String[] args) {
         int[] sectionA = {20, 15, 30};
         int[] sectionB = {25, 10, 30};
-
         analyzeInventory(sectionA, sectionB);
     }
 }
-

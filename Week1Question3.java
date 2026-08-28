@@ -1,9 +1,4 @@
 public class Week1Question3 {
-    /**
-     * Scans signal reading logs and finds the longest continuous streak of the same color.
-     * 
-     * @param signalLog String sequence of single-letter readings ('R', 'Y', 'G').
-     */
     public static void findLongestStreak(String signalLog) {
         if (signalLog == null || signalLog.isEmpty()) {
             System.out.println("No signal readings found.");
@@ -29,7 +24,6 @@ public class Week1Question3 {
             }
         }
 
-        // Final streak check at string boundary
         if (currentStreak > maxStreak) {
             maxStreak = currentStreak;
             maxChar = currentChar;
@@ -39,11 +33,7 @@ public class Week1Question3 {
     }
 
     public static void main(String[] args) {
-        System.out.println("--- Test Case 1 ---");
         findLongestStreak("RRGGGYRR");
-
-        System.out.println("\n--- Test Case 2 ---");
         findLongestStreak("RRRRYYGG");
     }
 }
-
